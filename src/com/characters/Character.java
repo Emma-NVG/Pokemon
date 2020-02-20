@@ -104,7 +104,7 @@ public class Character {
 			}
 			if(this.compteur == 2*frequence) {this.compteur =0;}
 		}
-		//Affiche le personnage
+		//initialise img à la posture correcte personnage
 		icon = new ImageIcon(getClass().getResource(stg));
 		img = icon.getImage();
 		return img;

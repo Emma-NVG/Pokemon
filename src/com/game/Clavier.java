@@ -23,9 +23,6 @@ public class Clavier implements KeyListener{
 			Fenetre.scene.dresseur.setToLeft(true);
 			Fenetre.scene.setDx(1);
 			Fenetre.scene.setDy(0);
-			/*if ((Fenetre.scene.getxDresseur()>10) && (Fenetre.scene.getyDresseur()>1) && (Fenetre.scene.getxDresseur()<400) && (Fenetre.scene.getyDresseur()<500)) {
-				Fenetre.scene.dresseur.setWalk(true);
-			}*/
 		}
 		if(e.getKeyCode()==KeyEvent.VK_UP) {
 			Fenetre.scene.dresseur.setWalk(true);
