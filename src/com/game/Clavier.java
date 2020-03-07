@@ -3,10 +3,10 @@ package com.game;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Clavier implements KeyListener{
+public class Clavier implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 			Fenetre.scene.dresseur.setWalk(true);
 			Fenetre.scene.dresseur.setToUp(false);
 			Fenetre.scene.dresseur.setToDown(false);
@@ -15,7 +15,7 @@ public class Clavier implements KeyListener{
 			Fenetre.scene.setDx(-1);
 			Fenetre.scene.setDy(0);
 		}
-		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			Fenetre.scene.dresseur.setWalk(true);
 			Fenetre.scene.dresseur.setToRight(false);
 			Fenetre.scene.dresseur.setToUp(false);
@@ -24,7 +24,7 @@ public class Clavier implements KeyListener{
 			Fenetre.scene.setDx(1);
 			Fenetre.scene.setDy(0);
 		}
-		if(e.getKeyCode()==KeyEvent.VK_UP) {
+		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			Fenetre.scene.dresseur.setWalk(true);
 			Fenetre.scene.dresseur.setToRight(false);
 			Fenetre.scene.dresseur.setToDown(false);
@@ -33,7 +33,7 @@ public class Clavier implements KeyListener{
 			Fenetre.scene.setDy(1);
 			Fenetre.scene.setDx(0);
 		}
-		if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			Fenetre.scene.dresseur.setWalk(true);
 			Fenetre.scene.dresseur.setToUp(false);
 			Fenetre.scene.dresseur.setToRight(false);
@@ -42,10 +42,14 @@ public class Clavier implements KeyListener{
 			Fenetre.scene.setDy(-1);
 			Fenetre.scene.setDx(0);
 		}
+		if (e.getKeyChar() == 'x') {
+			System.out.println("Exiting");
+			System.exit(0);
+		}
 	}
 
 	@Override
-	public void keyTyped(KeyEvent e) {	
+	public void keyTyped(KeyEvent e) {
 	}
 
 	@Override
